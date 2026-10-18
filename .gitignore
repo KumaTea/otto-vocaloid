@@ -1,0 +1,19 @@
+# copyrighted audio, renders, credentials
+data/
+out/
+secrets/
+cookies.txt
+*.cookies.txt
+
+.venv/
+__pycache__/
+
+FL
+Jianying
+melodyne
+
+blog
+
+# the user's working files, except the reviewed notes (the pipeline's input from Stage 3d on)
+user/*
+!user/tuned.mid

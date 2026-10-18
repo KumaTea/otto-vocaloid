@@ -1,0 +1,119 @@
+timeline: "youtube:BEKGuF5tY9E"   # all times are seconds on this video's clock
+
+segment:
+  start: 70.0        # 1:10: the result is the excerpt 1:10–2:08, built from the bed + Otto (no narration, no yt splice)
+  hum_start: 74.0    # 1:14 (refined in Stage 3)
+  end: 128.0         # 2:08
+  xfade_ms: 100
+
+sources:
+  yt:   {url: "https://www.youtube.com/watch?v=BEKGuF5tY9E"}
+  p1:   {url: "https://www.bilibili.com/video/BV1QYgfzcEpF?p=1"}
+  p2:   {url: "https://www.bilibili.com/video/BV1QYgfzcEpF?p=2"}
+  p3:   {url: "https://www.bilibili.com/video/BV1QYgfzcEpF?p=3"}
+  otto: {url: "https://www.bilibili.com/video/BV1Zs411g7Kg?p=1", clip: [118.0, 128.0]}  # 2:00–2:06 plus margin
+  sp:   {url: "https://www.bilibili.com/video/BV1Tk3Jz1EMP"}   # splash animation (开屏动画): music + humming. Unused: a different edit, not sample-consistent with yt
+  # lossless WAVs shared by the uploader of BV1QYgfzcEpF (44.1 kHz, 16-bit), downloaded by the user
+  w_orig:      {path: "data/raw/BV1QYgfzcEpF/原音乐.WAV"}                 # the PV's audio
+  w_vocals:    {path: "data/raw/BV1QYgfzcEpF/人声.wav"}                   # humming + breaths + narration (= p3)
+  w_bed:       {path: "data/raw/BV1QYgfzcEpF/音乐无吟唱(伴奏).wav"}        # music + effects (= p2)
+  w_music_hum: {path: "data/raw/BV1QYgfzcEpF/音乐加男声吟唱.WAV"}          # music + humming + breaths + effects (= p1)
+  w_chant:     {path: "data/raw/BV1QYgfzcEpF/吟唱原版.WAV"}               # the chant section only: everything but narration
+  w_chant_nostab: {path: "data/raw/BV1QYgfzcEpF/吟唱部分去除白厄被刀版.WAV"}  # the same, with the stab sound removed
+  otto2:       {url: "https://otto-hzys.huazhiwan.top/static/ysddTokens/xemx.mp3"}   # another laugh, from otto-hzys
+
+stems:                 # which sources Stage 1 aligns and exports (ids from `sources`)
+  bed: w_bed           # music + effects: what the laughs sit on
+  guide: w_vocals      # humming + breaths + narration: only used to find the notes
+  reference: w_orig    # bed + guide = reference, exactly
+
+auth:
+  bilibili_cookies: secrets/bilibili_cookies.txt   # written by `build.py login`
+  youtube_cookies: null                            # set to secrets/youtube_cookies.txt only if a bot check appears
+
+units:
+  sources:                      # laugh clips to cut into "ha" units (ids from `sources`)
+    otto:  {wav: otto_clip, window: [1.8, 8.0], groups: [6, 1, 4, 3], breath_group: 1,  # 2:00.15–2:05.7 of the stream: laugh1, inhale, laugh2, laugh3
+            cuts: {3: [6.70, 7.00]}}    # laugh 3 is flat in loudness: cuts pinned by hand (clip seconds) at the pitch changes
+    otto2: {wav: otto2, groups: [10]}                                                    # otto-hzys clip: 10 "ha"s (the user's count)
+  active_db: 12                 # frames within this of the clip's peak count as laughing
+  min_unit_ms: 80
+  auto_cut_score: 8             # groups: auto → cut wherever the cut score (see s2_units.cut_score) reaches this
+  fmin: 70
+  fmax: 600                     # pYIN locks onto the ~1 kHz vowel resonance of otto2 with a higher ceiling
+  denoise: false
+
+transcribe:
+  fmin: 60
+  fmax: 600
+  min_note_ms: 60
+  phrase_rest_ms: 400
+  glide_merge_ms: 100      # shorter notes in the middle of a slide join the note slid to
+  blip_drop_ms: 100        # shorter notes touching nothing are dropped
+  # approximate times of narration in the guide, from an earlier analysis: notes there are flagged for review.
+  # Incomplete (that analysis missed some words), so unflagged notes can be narration too.
+  narration_hints: [[77.35, 78.58], [80.07, 80.68], [113.65, 114.26], [116.33, 116.84]]
+  # the user's reviewed notes (FL Studio, 135 BPM). They replace the automatic transcription from Stage 3d on.
+  # Placement: in the user's FL project the anchor file starts at anchor_at_s and the first note at first_note_at_s;
+  # the anchor's position on the yt clock is measured, so the MIDI lands on the yt clock exactly.
+  user_midi: {path: user/tuned.mid, anchor_source: w_chant_nostab, anchor_at_s: 0.805, first_note_at_s: 1.000}
+
+stack:                          # the unison choir, 1:27–1:57
+  source: phrases               # phrases (layers_by_phrase below) | measured (proposed_layers in stack.json) | keys
+  # Otto layers per phrase of the reviewed notes (index = phrase number in notes_final.json, 16 phrases).
+  # A smoothed version of Stage 3c's measurement (stereo width), shaped by the user's landmarks: builds from 1:27,
+  # peaks 1:42–1:52, single again from 1:56. The final note (2:03.5) measures wide again: 3 for now, to confirm by ear.
+  #                  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+  layers_by_phrase: [1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 3, 1, 1, 1, 3]
+  # an extra layer an octave below the lead, where the original has a low drone (seen 1:42.5–1:49). Off until confirmed.
+  octave_down: []               # e.g. [[102.5, 109.0]]
+  baseline_end: 82.6            # notes ending before this are the single-voice reference (1:14–1:22.6)
+  octave_layer_db: -40          # a phrase whose energy an octave below the note exceeds this gets an octave-down layer
+  keys: [[87, 0.0], [102, 1.0], [117, 0.0]]   # fallback thickness curve: 1:27, 1:42, 1:57
+  max_layers: 4                 # lead + up to 3 doubles
+  change_at: phrase             # layer count changes at phrase starts (phrase) or per note (note)
+  detune_cents: 12              # doubles' fixed detunes, spread across ±this
+  jitter_ms: 20                 # random per-note onset offset for each double
+  pan_spread: 0.8               # 0 = all centre, 1 = hard left/right
+  double_gain_db: -3            # each double relative to the lead
+  seed: 1
+
+score:
+  transpose: auto               # or -12 / 0 / 12
+  lead_sources: [otto, otto2]   # both laughs: the stream laugh sits around E4, otto2 around A3, so the register picks
+  double_sources: [otto, otto2]
+  free_shift_st: 3              # shifts up to this cost 1 per semitone; beyond it the cost grows quadratically
+  comfort_stretch: 1.5          # stretching a laugh up to this factor costs nothing; beyond it, it costs (log2)
+  dynamics: 0.5                 # how much of the humming's note-to-note loudness carries over (dB per dB)
+  # cost weights. exhaustion: the laughs tire as they go on, and so does the song: fresh "ha"s early, spent ones late
+  weights: {shift: 1.0, stretch: 6.0, exhaustion: 4.0, repeat: 3.0, reuse: 0.3, layer_clash: 10.0}
+  breath_after_note_s: 1.0      # the inhale only follows notes at least this long (the user's choice) …
+  breath_min_rest_ms: 150       # … with at least this much rest after them
+  breath_gain_db: -6
+
+render:
+  engine: world
+  onset_hold_ms: 20             # after the vowel starts, this much plays at 1× before the stretch begins
+  release_ms: 40                # the last part of a "ha" plays at 1×, so it ends naturally
+  min_stretch: 0.7              # a note shorter than that compression is cut (with a fade) instead
+  sustain_flatten: 0.5          # 0 = a stretched "ha" keeps its natural decay, 1 = flattened fully
+  xfade_ms: 15                  # when the next "h" starts before the previous "ha" ends
+  variants:                     # A/B: pitch (alpha) and long notes (max_stretch)
+    - {name: natural,      alpha: 1.0, max_stretch: 2.5}    # the laugh's own pitch movement, shifted onto the note
+    - {name: half,         alpha: 0.5, max_stretch: 2.5}
+    - {name: flat,         alpha: 0.0, max_stretch: 2.5}    # hard-tuned
+    - {name: natural_full, alpha: 1.0, max_stretch: null}   # long notes stretched over their full length
+    - {name: half_full,    alpha: 0.5, max_stretch: null}   # the user's pick (2026-10-10): half the movement, full stretch
+  default: half_full            # the variant exported to out/daw/ and mixed in Stage 6
+
+mix:                            # Stage 6: the Otto bus (render.default) over the bed
+  highpass_hz: 80               # Otto's lowest note is D#3 (156 Hz): below 80 Hz there is only the stream's rumble
+  level_offset_db: 0            # Otto's loudness over the notes = the original humming's, + this (+ = louder Otto)
+  # light and short: where the original humming has a clean rest, its tail falls 25–30 dB within 0.3 s
+  reverb: {room_size: 0.5, damping: 0.5, width: 1.0, wet: 0.15}   # wet: 0 = dry, as in the Stage 5 previews
+  ceiling_dbtp: -1.0            # the mix's true-peak ceiling: a limiter acts only above it
+  edge_fade_ms: 10              # fades at the excerpt's cut points, so they don't click
+
+export:
+  sample_format: float32       # WAV in out/daw/; Melodyne, FL Studio and REAPER all read it
+  tempo: 135                   # BPM (the user checked: 135, or 67.5 half-time); the beat tracker said 136 and was wrong

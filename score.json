@@ -1,0 +1,2757 @@
+{
+  "transpose": 0,
+  "lead_sources": [
+    "otto",
+    "otto2"
+  ],
+  "double_sources": [
+    "otto",
+    "otto2"
+  ],
+  "notes": [
+    {
+      "i": 0,
+      "start": 74.1283,
+      "end": 75.0172,
+      "dur": 0.8889,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 0,
+      "progress": 0.0,
+      "gain_db": -1.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 1.84,
+          "cost": 9.69
+        }
+      ]
+    },
+    {
+      "i": 1,
+      "start": 75.0172,
+      "end": 75.2394,
+      "dur": 0.2222,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 0,
+      "progress": 0.017,
+      "gain_db": -0.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_01",
+          "shift_st": -2.48,
+          "stretch": 1.54,
+          "cost": 3.0
+        }
+      ]
+    },
+    {
+      "i": 2,
+      "start": 75.2394,
+      "end": 75.9061,
+      "dur": 0.6667,
+      "midi": 63,
+      "name": "D#4",
+      "transpose": 0,
+      "phrase": 0,
+      "progress": 0.021,
+      "gain_db": -2.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": 0.77,
+          "stretch": 1.6,
+          "cost": 4.23
+        }
+      ]
+    },
+    {
+      "i": 3,
+      "start": 76.3506,
+      "end": 76.795,
+      "dur": 0.4444,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 1,
+      "progress": 0.042,
+      "gain_db": 0.0,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 1.26,
+          "cost": 4.38
+        }
+      ]
+    },
+    {
+      "i": 4,
+      "start": 76.795,
+      "end": 77.2394,
+      "dur": 0.4444,
+      "midi": 63,
+      "name": "D#4",
+      "transpose": 0,
+      "phrase": 1,
+      "progress": 0.051,
+      "gain_db": -0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": 0.77,
+          "stretch": 1.01,
+          "cost": 3.87
+        }
+      ]
+    },
+    {
+      "i": 5,
+      "start": 77.4617,
+      "end": 77.6839,
+      "dur": 0.2222,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 1,
+      "progress": 0.064,
+      "gain_db": 2.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_01",
+          "shift_st": -2.48,
+          "stretch": 1.54,
+          "cost": 3.11
+        }
+      ]
+    },
+    {
+      "i": 6,
+      "start": 77.6839,
+      "end": 77.9061,
+      "dur": 0.2222,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 1,
+      "progress": 0.068,
+      "gain_db": 1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_03",
+          "shift_st": 4.02,
+          "stretch": 1.47,
+          "cost": 5.6
+        }
+      ]
+    },
+    {
+      "i": 7,
+      "start": 78.3506,
+      "end": 78.5728,
+      "dur": 0.2222,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 2,
+      "progress": 0.081,
+      "gain_db": 0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_06",
+          "shift_st": 1.42,
+          "stretch": 1.54,
+          "cost": 4.02
+        }
+      ]
+    },
+    {
+      "i": 8,
+      "start": 78.5728,
+      "end": 79.0172,
+      "dur": 0.4444,
+      "midi": 51,
+      "name": "D#3",
+      "transpose": 0,
+      "phrase": 2,
+      "progress": 0.085,
+      "gain_db": -5.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_12",
+          "shift_st": 1.82,
+          "stretch": 1.88,
+          "cost": 7.08
+        }
+      ]
+    },
+    {
+      "i": 9,
+      "start": 81.0172,
+      "end": 81.2394,
+      "dur": 0.2222,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 3,
+      "progress": 0.131,
+      "gain_db": -1.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 1.47,
+          "cost": 2.09
+        }
+      ]
+    },
+    {
+      "i": 10,
+      "start": 81.2394,
+      "end": 81.4617,
+      "dur": 0.2222,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 3,
+      "progress": 0.136,
+      "gain_db": -0.8,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_06",
+          "shift_st": 1.42,
+          "stretch": 1.54,
+          "cost": 4.1
+        }
+      ]
+    },
+    {
+      "i": 11,
+      "start": 81.9061,
+      "end": 82.1283,
+      "dur": 0.2222,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 4,
+      "progress": 0.148,
+      "gain_db": 0.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_05",
+          "shift_st": -3.98,
+          "stretch": 1.12,
+          "cost": 5.53
+        }
+      ]
+    },
+    {
+      "i": 12,
+      "start": 82.1283,
+      "end": 82.2394,
+      "dur": 0.1111,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 4,
+      "progress": 0.153,
+      "gain_db": -4.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_01",
+          "shift_st": -2.88,
+          "stretch": 0.79,
+          "cost": 3.05
+        }
+      ]
+    },
+    {
+      "i": 13,
+      "start": 82.2394,
+      "end": 82.5728,
+      "dur": 0.3333,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 4,
+      "progress": 0.155,
+      "gain_db": -5.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.24,
+          "cost": 5.66
+        }
+      ]
+    },
+    {
+      "i": 14,
+      "start": 84.1283,
+      "end": 84.795,
+      "dur": 0.6667,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.191,
+      "gain_db": -3.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 1.35,
+          "cost": 7.45
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 2.76,
+          "cost": 11.09,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -14.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 15,
+      "start": 84.8135,
+      "end": 85.2487,
+      "dur": 0.4352,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.204,
+      "gain_db": 0.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 1.71,
+          "cost": 5.62
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": -0.68,
+          "stretch": 0.83,
+          "cost": 4.47,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 13.9,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 16,
+      "start": 85.4617,
+      "end": 85.6839,
+      "dur": 0.2222,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.216,
+      "gain_db": -1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_05",
+          "shift_st": -3.98,
+          "stretch": 1.12,
+          "cost": 5.56
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": 4.02,
+          "stretch": 1.47,
+          "cost": 5.61,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 10.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 17,
+      "start": 85.6839,
+      "end": 85.795,
+      "dur": 0.1111,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.22,
+      "gain_db": -3.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_00",
+          "shift_st": -2.28,
+          "stretch": 0.64,
+          "cost": 3.53
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_01",
+          "shift_st": -2.88,
+          "stretch": 0.79,
+          "cost": 3.62,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -9.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 18,
+      "start": 85.795,
+      "end": 86.1283,
+      "dur": 0.3333,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.222,
+      "gain_db": -3.8,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.24,
+          "cost": 6.29
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 2.48,
+          "cost": 6.69,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -0.2,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 19,
+      "start": 86.3505,
+      "end": 86.795,
+      "dur": 0.4444,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 5,
+      "progress": 0.233,
+      "gain_db": -5.8,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_12",
+          "shift_st": 3.82,
+          "stretch": 1.88,
+          "cost": 9.12
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": -4.28,
+          "stretch": 1.75,
+          "cost": 10.69,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -2.0,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 20,
+      "start": 87.9061,
+      "end": 88.3505,
+      "dur": 0.4444,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 6,
+      "progress": 0.263,
+      "gain_db": -2.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 0.85,
+          "cost": 7.76
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 3.49,
+          "cost": 9.78,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 6.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.75,
+          "cost": 8.05,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 11.5,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 21,
+      "start": 88.3505,
+      "end": 88.795,
+      "dur": 0.4444,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 6,
+      "progress": 0.271,
+      "gain_db": 0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 1.01,
+          "cost": 2.75
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 1.26,
+          "cost": 3.76,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -16.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": -2.38,
+          "stretch": 1.6,
+          "cost": 4.19,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -18.9,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 22,
+      "start": 88.795,
+      "end": 89.2394,
+      "dur": 0.4444,
+      "midi": 65,
+      "name": "F4",
+      "transpose": 0,
+      "phrase": 6,
+      "progress": 0.28,
+      "gain_db": 0.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": -0.58,
+          "stretch": 1.11,
+          "cost": 1.46
+        },
+        {
+          "layer": 1,
+          "unit": "otto_08",
+          "shift_st": 0.62,
+          "stretch": 1.6,
+          "cost": 2.7,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 13.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": 1.12,
+          "stretch": 1.26,
+          "cost": 3.27,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -2.7,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 23,
+      "start": 89.2394,
+      "end": 89.6839,
+      "dur": 0.4444,
+      "midi": 63,
+      "name": "D#4",
+      "transpose": 0,
+      "phrase": 6,
+      "progress": 0.288,
+      "gain_db": -1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_09",
+          "shift_st": -0.88,
+          "stretch": 1.26,
+          "cost": 3.3
+        },
+        {
+          "layer": 1,
+          "unit": "otto_10",
+          "shift_st": 0.77,
+          "stretch": 1.01,
+          "cost": 3.52,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 10.5,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": -1.38,
+          "stretch": 1.6,
+          "cost": 3.73,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -19.9,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 24,
+      "start": 90.3505,
+      "end": 90.795,
+      "dur": 0.4444,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.309,
+      "gain_db": 0.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 1.01,
+          "cost": 3.19
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 1.26,
+          "cost": 4.51,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -2.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_07",
+          "shift_st": -3.58,
+          "stretch": 1.11,
+          "cost": 4.81,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 8.9,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 25,
+      "start": 90.795,
+      "end": 91.2394,
+      "dur": 0.4444,
+      "midi": 63,
+      "name": "D#4",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.318,
+      "gain_db": 1.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_09",
+          "shift_st": -0.88,
+          "stretch": 1.26,
+          "cost": 3.78
+        },
+        {
+          "layer": 1,
+          "unit": "otto_08",
+          "shift_st": -1.38,
+          "stretch": 1.6,
+          "cost": 3.91,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -10.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": 0.77,
+          "stretch": 1.01,
+          "cost": 4.0,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 17.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 26,
+      "start": 91.4616,
+      "end": 91.6839,
+      "dur": 0.2222,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.331,
+      "gain_db": 0.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_05",
+          "shift_st": -1.98,
+          "stretch": 1.12,
+          "cost": 2.93
+        },
+        {
+          "layer": 1,
+          "unit": "otto_01",
+          "shift_st": -2.48,
+          "stretch": 1.54,
+          "cost": 4.32,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 16.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_03",
+          "shift_st": -2.08,
+          "stretch": 1.91,
+          "cost": 4.49,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -18.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 27,
+      "start": 91.6839,
+      "end": 92.1283,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.335,
+      "gain_db": 0.8,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 5.18
+        },
+        {
+          "layer": 1,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 5.69,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -19.0,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -3.88,
+          "stretch": 1.26,
+          "cost": 7.4,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 1.7,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 28,
+      "start": 92.3505,
+      "end": 92.5728,
+      "dur": 0.2222,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.347,
+      "gain_db": -1.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_06",
+          "shift_st": 1.42,
+          "stretch": 1.54,
+          "cost": 3.55
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": 2.02,
+          "stretch": 1.47,
+          "cost": 3.58,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 17.6,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 0.74,
+          "cost": 5.13,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -4.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 29,
+      "start": 92.5728,
+      "end": 93.0172,
+      "dur": 0.4444,
+      "midi": 51,
+      "name": "D#3",
+      "transpose": 0,
+      "phrase": 7,
+      "progress": 0.352,
+      "gain_db": -1.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_12",
+          "shift_st": 1.82,
+          "stretch": 1.88,
+          "cost": 6.61
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_00",
+          "shift_st": -4.28,
+          "stretch": 4.8,
+          "cost": 16.88,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -11.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_03",
+          "shift_st": -4.98,
+          "stretch": 3.49,
+          "cost": 16.14,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -3.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 30,
+      "start": 95.0172,
+      "end": 95.4616,
+      "dur": 0.4444,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.398,
+      "gain_db": 1.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 0.85,
+          "cost": 7.82
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.75,
+          "cost": 8.11,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -18.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_06",
+          "shift_st": -1.58,
+          "stretch": 3.66,
+          "cost": 11.28,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -11.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 31,
+      "start": 95.4616,
+      "end": 95.9061,
+      "dur": 0.4444,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.407,
+      "gain_db": 1.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 1.75,
+          "cost": 6.81
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": -0.68,
+          "stretch": 0.85,
+          "cost": 4.85,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -2.5,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": -4.23,
+          "stretch": 1.01,
+          "cost": 8.46,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -0.2,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 32,
+      "start": 95.9061,
+      "end": 96.3505,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.415,
+      "gain_db": 0.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 5.76
+        },
+        {
+          "layer": 1,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 5.97,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -10.7,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -3.88,
+          "stretch": 1.26,
+          "cost": 7.37,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -10.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 33,
+      "start": 96.3505,
+      "end": 96.5728,
+      "dur": 0.2222,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.424,
+      "gain_db": -1.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_03",
+          "shift_st": -2.98,
+          "stretch": 1.47,
+          "cost": 5.44
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_06",
+          "shift_st": -3.58,
+          "stretch": 1.54,
+          "cost": 6.18,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -11.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_12",
+          "shift_st": 3.82,
+          "stretch": 0.79,
+          "cost": 7.03,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -1.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 34,
+      "start": 96.5728,
+      "end": 96.795,
+      "dur": 0.2222,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.428,
+      "gain_db": -2.5,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_06",
+          "shift_st": -1.58,
+          "stretch": 1.54,
+          "cost": 4.29
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 1.47,
+          "cost": 3.76,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -8.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_00",
+          "shift_st": -0.28,
+          "stretch": 2.03,
+          "cost": 5.2,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -19.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 35,
+      "start": 96.795,
+      "end": 97.0172,
+      "dur": 0.2222,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.432,
+      "gain_db": -2.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_03",
+          "shift_st": -2.98,
+          "stretch": 1.47,
+          "cost": 6.08
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_06",
+          "shift_st": -3.58,
+          "stretch": 1.54,
+          "cost": 6.74,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 13.5,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_12",
+          "shift_st": 3.82,
+          "stretch": 0.79,
+          "cost": 7.3,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 2.3,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 36,
+      "start": 97.0172,
+      "end": 97.6839,
+      "dur": 0.6667,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 8,
+      "progress": 0.436,
+      "gain_db": -2.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 1.35,
+          "cost": 8.57
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 2.76,
+          "cost": 12.51,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 5.7,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 5.52,
+          "cost": 15.66,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -12.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 37,
+      "start": 98.5728,
+      "end": 99.0172,
+      "dur": 0.4444,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.466,
+      "gain_db": 1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.75,
+          "cost": 8.74
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 0.85,
+          "cost": 8.75,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 19.7,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_06",
+          "shift_st": -1.58,
+          "stretch": 3.66,
+          "cost": 12.21,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 14.4,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 38,
+      "start": 99.0172,
+      "end": 99.4616,
+      "dur": 0.4444,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.475,
+      "gain_db": 2.4,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -0.68,
+          "stretch": 0.85,
+          "cost": 5.78
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 1.75,
+          "cost": 7.44,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -15.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": -4.23,
+          "stretch": 1.01,
+          "cost": 8.79,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -6.7,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 39,
+      "start": 99.4616,
+      "end": 99.9061,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.483,
+      "gain_db": 0.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 6.3
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 6.69,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 8.9,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -3.88,
+          "stretch": 1.26,
+          "cost": 7.4,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 8.4,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 40,
+      "start": 99.9061,
+      "end": 100.3505,
+      "dur": 0.4444,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.492,
+      "gain_db": 1.4,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.75,
+          "cost": 9.23
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 3.49,
+          "cost": 12.23,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 17.5,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 0.85,
+          "cost": 9.55,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -3.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 41,
+      "start": 100.3505,
+      "end": 100.795,
+      "dur": 0.4444,
+      "midi": 53,
+      "name": "F3",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.5,
+      "gain_db": 0.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_12",
+          "shift_st": 3.82,
+          "stretch": 1.88,
+          "cost": 9.26
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": -4.28,
+          "stretch": 1.75,
+          "cost": 12.32,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 13.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_06",
+          "shift_st": -3.58,
+          "stretch": 3.66,
+          "cost": 14.54,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 6.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 42,
+      "start": 100.795,
+      "end": 101.2394,
+      "dur": 0.4444,
+      "midi": 55,
+      "name": "G3",
+      "transpose": 0,
+      "phrase": 9,
+      "progress": 0.508,
+      "gain_db": -1.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": -2.28,
+          "stretch": 1.75,
+          "cost": 9.77
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": -3.68,
+          "stretch": 0.85,
+          "cost": 9.78,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -7.9,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_03",
+          "shift_st": -0.98,
+          "stretch": 3.49,
+          "cost": 12.6,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 3.5,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 43,
+      "start": 101.9061,
+      "end": 102.3505,
+      "dur": 0.4444,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.53,
+      "gain_db": 0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": -0.68,
+          "stretch": 0.85,
+          "cost": 6.76
+        },
+        {
+          "layer": 1,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 1.75,
+          "cost": 8.42,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 15.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": -4.23,
+          "stretch": 1.01,
+          "cost": 9.17,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 13.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto2_06",
+          "shift_st": 1.42,
+          "stretch": 3.66,
+          "cost": 12.39,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 0.2,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 44,
+      "start": 102.3505,
+      "end": 103.0172,
+      "dur": 0.6667,
+      "midi": 68,
+      "name": "G#4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.538,
+      "gain_db": 3.4,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": 2.42,
+          "stretch": 1.76,
+          "cost": 4.55
+        },
+        {
+          "layer": 1,
+          "unit": "otto_11",
+          "shift_st": -2.78,
+          "stretch": 2.43,
+          "cost": 8.12,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 3.6,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": 3.62,
+          "stretch": 2.53,
+          "cost": 9.71,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -18.6,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_09",
+          "shift_st": 4.12,
+          "stretch": 1.99,
+          "cost": 10.41,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": -10.3,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 45,
+      "start": 103.0172,
+      "end": 103.4616,
+      "dur": 0.4444,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.551,
+      "gain_db": 4.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_08",
+          "shift_st": 2.62,
+          "stretch": 1.6,
+          "cost": 4.82
+        },
+        {
+          "layer": 1,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 1.11,
+          "cost": 2.52,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 11.9,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_11",
+          "shift_st": -3.78,
+          "stretch": 1.54,
+          "cost": 5.73,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -3.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_05",
+          "shift_st": 3.02,
+          "stretch": 2.65,
+          "cost": 9.39,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": -13.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 46,
+      "start": 103.4616,
+      "end": 105.4616,
+      "dur": 2.0,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.559,
+      "gain_db": 3.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 5.62,
+          "cost": 14.3
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": 3.12,
+          "stretch": 6.36,
+          "cost": 19.06,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 2.0,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": 2.62,
+          "stretch": 8.08,
+          "cost": 19.09,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 8.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_11",
+          "shift_st": -3.78,
+          "stretch": 7.76,
+          "cost": 20.01,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 7.0,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 47,
+      "start": 105.6839,
+      "end": 106.1283,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.602,
+      "gain_db": 1.8,
+      "breath_before": {
+        "unit": "otto_06",
+        "start": 105.4616,
+        "gain_db": -6
+      },
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 6.42
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 7.41,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -5.0,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -3.88,
+          "stretch": 1.26,
+          "cost": 7.83,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -2.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_08",
+          "shift_st": -4.38,
+          "stretch": 1.6,
+          "cost": 8.07,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 0.3,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 48,
+      "start": 106.1283,
+      "end": 106.795,
+      "dur": 0.6667,
+      "midi": 68,
+      "name": "G#4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.61,
+      "gain_db": 3.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": 2.42,
+          "stretch": 1.76,
+          "cost": 5.74
+        },
+        {
+          "layer": 1,
+          "unit": "otto_11",
+          "shift_st": -2.78,
+          "stretch": 2.43,
+          "cost": 8.74,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 11.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": 3.62,
+          "stretch": 2.53,
+          "cost": 10.84,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 0.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_09",
+          "shift_st": 4.12,
+          "stretch": 1.99,
+          "cost": 11.02,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": -4.3,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 49,
+      "start": 106.795,
+      "end": 107.2394,
+      "dur": 0.4444,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.623,
+      "gain_db": 1.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_08",
+          "shift_st": 2.62,
+          "stretch": 1.6,
+          "cost": 6.05
+        },
+        {
+          "layer": 1,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 1.11,
+          "cost": 3.71,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -0.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_11",
+          "shift_st": -3.78,
+          "stretch": 1.54,
+          "cost": 6.34,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -18.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_05",
+          "shift_st": 3.02,
+          "stretch": 2.65,
+          "cost": 9.97,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": -18.3,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 50,
+      "start": 107.2394,
+      "end": 109.0172,
+      "dur": 1.7778,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.631,
+      "gain_db": 0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 4.98,
+          "cost": 14.43
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": 3.12,
+          "stretch": 5.63,
+          "cost": 18.62,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 8.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": 2.62,
+          "stretch": 7.16,
+          "cost": 19.34,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 19.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_11",
+          "shift_st": -3.78,
+          "stretch": 6.87,
+          "cost": 19.56,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 3.7,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 51,
+      "start": 109.2394,
+      "end": 109.6839,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.669,
+      "gain_db": 0.9,
+      "breath_before": {
+        "unit": "otto_06",
+        "start": 109.0172,
+        "gain_db": -6
+      },
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 6.45
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 7.44,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -4.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -3.88,
+          "stretch": 1.26,
+          "cost": 8.48,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -13.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_08",
+          "shift_st": -4.38,
+          "stretch": 1.6,
+          "cost": 9.55,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 0.1,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 52,
+      "start": 109.6839,
+      "end": 110.1283,
+      "dur": 0.4444,
+      "midi": 65,
+      "name": "F4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.678,
+      "gain_db": 0.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": -0.58,
+          "stretch": 1.11,
+          "cost": 3.69
+        },
+        {
+          "layer": 1,
+          "unit": "otto_08",
+          "shift_st": 0.62,
+          "stretch": 1.6,
+          "cost": 5.17,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 19.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": 2.77,
+          "stretch": 1.01,
+          "cost": 7.26,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 10.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_09",
+          "shift_st": 1.12,
+          "stretch": 1.26,
+          "cost": 5.66,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 1.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 53,
+      "start": 110.1283,
+      "end": 110.5727,
+      "dur": 0.4444,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.686,
+      "gain_db": 0.2,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 1.01,
+          "cost": 4.98
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 1.26,
+          "cost": 6.76,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 14.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_07",
+          "shift_st": -3.58,
+          "stretch": 1.11,
+          "cost": 7.19,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -10.7,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_08",
+          "shift_st": -2.38,
+          "stretch": 1.6,
+          "cost": 7.26,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": 0.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 54,
+      "start": 110.5727,
+      "end": 112.3505,
+      "dur": 1.7778,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 10,
+      "progress": 0.695,
+      "gain_db": -1.0,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 3.32,
+          "stretch": 3.82,
+          "cost": 17.78
+        },
+        {
+          "layer": 1,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 4.52,
+          "cost": 14.8,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 18.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 5.63,
+          "cost": 18.54,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 3.1,
+          "gain_db": -3
+        },
+        {
+          "layer": 3,
+          "unit": "otto_07",
+          "shift_st": -3.58,
+          "stretch": 4.98,
+          "cost": 17.91,
+          "detune_c": -12.0,
+          "pan": -0.8,
+          "offset_ms": -1.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 55,
+      "start": 112.795,
+      "end": 113.2394,
+      "dur": 0.4444,
+      "midi": 58,
+      "name": "A#3",
+      "transpose": 0,
+      "phrase": 11,
+      "progress": 0.737,
+      "gain_db": -0.4,
+      "breath_before": {
+        "unit": "otto_06",
+        "start": 112.52,
+        "gain_db": -6
+      },
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto2_09",
+          "shift_st": 0.72,
+          "stretch": 1.75,
+          "cost": 7.89
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": -0.68,
+          "stretch": 0.85,
+          "cost": 7.13,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -9.2,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": -4.23,
+          "stretch": 1.01,
+          "cost": 10.14,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 1.9,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 56,
+      "start": 113.2394,
+      "end": 113.6838,
+      "dur": 0.4444,
+      "midi": 65,
+      "name": "F4",
+      "transpose": 0,
+      "phrase": 11,
+      "progress": 0.746,
+      "gain_db": 0.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": -0.58,
+          "stretch": 1.11,
+          "cost": 4.86
+        },
+        {
+          "layer": 1,
+          "unit": "otto_08",
+          "shift_st": 0.62,
+          "stretch": 1.6,
+          "cost": 6.04,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 18.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": 1.12,
+          "stretch": 1.26,
+          "cost": 6.84,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -19.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 57,
+      "start": 113.6838,
+      "end": 114.1283,
+      "dur": 0.4444,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 11,
+      "progress": 0.754,
+      "gain_db": 1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_11",
+          "shift_st": -3.78,
+          "stretch": 1.54,
+          "cost": 6.41
+        },
+        {
+          "layer": 1,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 1.11,
+          "cost": 6.04,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 11.3,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_08",
+          "shift_st": 2.62,
+          "stretch": 1.6,
+          "cost": 8.37,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 12.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 58,
+      "start": 114.1283,
+      "end": 115.9061,
+      "dur": 1.7778,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 11,
+      "progress": 0.763,
+      "gain_db": -1.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 4.52,
+          "cost": 15.23
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": 3.32,
+          "stretch": 3.82,
+          "cost": 18.11,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 15.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_07",
+          "shift_st": -3.58,
+          "stretch": 4.98,
+          "cost": 19.08,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 9.6,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 59,
+      "start": 116.3505,
+      "end": 116.795,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 12,
+      "progress": 0.805,
+      "gain_db": -0.0,
+      "breath_before": {
+        "unit": "otto_06",
+        "start": 115.9061,
+        "gain_db": -6
+      },
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 8.1
+        }
+      ]
+    },
+    {
+      "i": 60,
+      "start": 116.795,
+      "end": 117.4616,
+      "dur": 0.6667,
+      "midi": 68,
+      "name": "G#4",
+      "transpose": 0,
+      "phrase": 12,
+      "progress": 0.814,
+      "gain_db": 1.4,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_11",
+          "shift_st": -2.78,
+          "stretch": 2.43,
+          "cost": 9.12
+        }
+      ]
+    },
+    {
+      "i": 61,
+      "start": 117.4616,
+      "end": 117.6838,
+      "dur": 0.2222,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 12,
+      "progress": 0.826,
+      "gain_db": -6.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_00",
+          "shift_st": 0.92,
+          "stretch": 1.62,
+          "cost": 4.9
+        }
+      ]
+    },
+    {
+      "i": 62,
+      "start": 117.6838,
+      "end": 118.5727,
+      "dur": 0.8889,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 12,
+      "progress": 0.831,
+      "gain_db": -2.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": 1.42,
+          "stretch": 2.4,
+          "cost": 11.02
+        }
+      ]
+    },
+    {
+      "i": 63,
+      "start": 119.0172,
+      "end": 119.4616,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 13,
+      "progress": 0.856,
+      "gain_db": -2.1,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 8.2
+        }
+      ]
+    },
+    {
+      "i": 64,
+      "start": 120.3505,
+      "end": 120.5727,
+      "dur": 0.2222,
+      "midi": 70,
+      "name": "A#4",
+      "transpose": 0,
+      "phrase": 14,
+      "progress": 0.881,
+      "gain_db": -1.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_11",
+          "shift_st": -0.78,
+          "stretch": 0.65,
+          "cost": 3.61
+        }
+      ]
+    },
+    {
+      "i": 65,
+      "start": 120.795,
+      "end": 121.0172,
+      "dur": 0.2222,
+      "midi": 68,
+      "name": "G#4",
+      "transpose": 0,
+      "phrase": 14,
+      "progress": 0.89,
+      "gain_db": 0.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_00",
+          "shift_st": 1.92,
+          "stretch": 1.62,
+          "cost": 6.46
+        }
+      ]
+    },
+    {
+      "i": 66,
+      "start": 121.2394,
+      "end": 121.4616,
+      "dur": 0.2222,
+      "midi": 67,
+      "name": "G4",
+      "transpose": 0,
+      "phrase": 14,
+      "progress": 0.898,
+      "gain_db": 4.3,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_05",
+          "shift_st": 3.02,
+          "stretch": 1.12,
+          "cost": 6.45
+        }
+      ]
+    },
+    {
+      "i": 67,
+      "start": 121.4616,
+      "end": 121.6838,
+      "dur": 0.2222,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 14,
+      "progress": 0.903,
+      "gain_db": -0.7,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_01",
+          "shift_st": -2.48,
+          "stretch": 1.54,
+          "cost": 6.91
+        }
+      ]
+    },
+    {
+      "i": 68,
+      "start": 123.4616,
+      "end": 123.9061,
+      "dur": 0.4444,
+      "midi": 60,
+      "name": "C4",
+      "transpose": 0,
+      "phrase": 15,
+      "progress": 0.941,
+      "gain_db": -2.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_13",
+          "shift_st": 1.32,
+          "stretch": 0.85,
+          "cost": 8.16
+        },
+        {
+          "layer": 1,
+          "unit": "otto_10",
+          "shift_st": -2.23,
+          "stretch": 1.01,
+          "cost": 8.69,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 12.4,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto2_09",
+          "shift_st": 2.72,
+          "stretch": 1.75,
+          "cost": 9.38,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 0.7,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 69,
+      "start": 123.9061,
+      "end": 124.5727,
+      "dur": 0.6667,
+      "midi": 65,
+      "name": "F4",
+      "transpose": 0,
+      "phrase": 15,
+      "progress": 0.949,
+      "gain_db": -1.0,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_07",
+          "shift_st": -0.58,
+          "stretch": 1.76,
+          "cost": 8.25
+        },
+        {
+          "layer": 1,
+          "unit": "otto_09",
+          "shift_st": 1.12,
+          "stretch": 1.99,
+          "cost": 10.39,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 2.5,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_10",
+          "shift_st": 2.77,
+          "stretch": 1.6,
+          "cost": 10.11,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -3.0,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 70,
+      "start": 124.5727,
+      "end": 124.7949,
+      "dur": 0.2222,
+      "midi": 63,
+      "name": "D#4",
+      "transpose": 0,
+      "phrase": 15,
+      "progress": 0.962,
+      "gain_db": -2.6,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_05",
+          "shift_st": -0.98,
+          "stretch": 1.12,
+          "cost": 4.96
+        },
+        {
+          "layer": 1,
+          "unit": "otto_03",
+          "shift_st": -1.08,
+          "stretch": 1.91,
+          "cost": 6.31,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": -17.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_01",
+          "shift_st": -1.48,
+          "stretch": 1.54,
+          "cost": 6.45,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": 14.8,
+          "gain_db": -3
+        }
+      ]
+    },
+    {
+      "i": 71,
+      "start": 124.7949,
+      "end": 126.5727,
+      "dur": 1.7778,
+      "midi": 62,
+      "name": "D4",
+      "transpose": 0,
+      "phrase": 15,
+      "progress": 0.966,
+      "gain_db": -4.9,
+      "breath_before": false,
+      "layers": [
+        {
+          "layer": 0,
+          "unit": "otto_10",
+          "shift_st": -0.23,
+          "stretch": 4.52,
+          "cost": 16.94
+        },
+        {
+          "layer": 1,
+          "unit": "otto_13",
+          "shift_st": 3.32,
+          "stretch": 3.82,
+          "cost": 18.49,
+          "detune_c": -6.0,
+          "pan": -0.4,
+          "offset_ms": 2.8,
+          "gain_db": -3
+        },
+        {
+          "layer": 2,
+          "unit": "otto_09",
+          "shift_st": -1.88,
+          "stretch": 5.63,
+          "cost": 20.53,
+          "detune_c": 6.0,
+          "pan": 0.4,
+          "offset_ms": -12.0,
+          "gain_db": -3
+        }
+      ]
+    }
+  ]
+}

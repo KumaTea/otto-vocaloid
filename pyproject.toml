@@ -1,0 +1,26 @@
+[project]
+name = "coronal-otto"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "deno>=2.9.7",
+    "librosa>=0.11.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pedalboard>=0.9.26",
+    "praat-parselmouth>=0.4.7",
+    "pretty-midi>=0.2.11.post0",
+    "pyloudnorm>=0.2.0",
+    "pyworld>=0.3.5",
+    "pyyaml>=6.0.3",
+    "qrcode[pil]>=8.2",
+    "requests>=2.34.2",
+    "scipy>=1.17.1",
+    "setuptools<81",
+    "soundfile>=0.14.0",
+    "yt-dlp[default]>=2026.8.19",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.bfsu.edu.cn/pypi/web/simple"
+default = true

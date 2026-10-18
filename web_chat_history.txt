@@ -1,0 +1,227 @@
+This file is the original chat history with Claude.
+
+https://claude.ai/share/58747af1-b836-48a5-b074-4a69bc3c9be4
+
+---
+
+With the advancement of AI technology, marked by the release of models like Anthropic’s Claude Opus 5.5 (as well as the flagship, Fable) and OpenAI’s ChatGPT Astra 6, we have recently seen a surge in high-quality, **pure** AI-generated videos. These range from popular science content, philosophical vignettes, to PVs for VOCALOID songs:
+
+opus5.5真神降临 群论之美宣传片 (The Arrival of the True Master ,Opus 5.5: A Promo for the Beauty of Group Theory) https://www.bilibili.com/video/BV12Zhm6oE6m/ https://github.com/AnctyEnly453/abstract-algebra-promo
+
+Opus 5.5生成短片《我从未见过太阳》 (Opus 5.5 Short Film: "I Have Never Seen the Sun") https://www.bilibili.com/video/BV1b9ad6xEnD/ (no open source)
+
+如果聊天窗口就是她的整个世界 —— world.execute(me) ("If the Chat Window Were Her Whole World" — world.execute(me)) https://www.bilibili.com/video/BV1xCai6aE9g/ https://github.com/MisakaZentai/world-execute-me-dsh-pv
+
+These exquisitely crafted videos offer a refreshing experience to me. By mentioning pure, You can see that they aren't created using traditional AI video generation methods ("traditional" refers to text-to-video models like Seedance); in fact, I find this new approach much more elegant. Traditional methods just somehow mimic cinematography in a somewhat clumsy fashion, only by relying on scaling law to achieve rather great results, whereas this new approach actually learns *how* humans create content. While this won't immediately disrupt applications like Seedance, in the long run, this type of AI-driven video production holds immense potential in fields such as science education and animation.
+
+I have another project I’d like to realize using this technology.
+I wonder if you’ve heard of Kichiku (鬼畜, きちく, remix/parody videos), OtoMAD (音MAD, おとマッド, audio MADs), or Human-made VOCALOID (人力VOCALOID, vocal synthesis using human speech samples)? Although there are subtle differences between them, I want to focus on the musical aspect (and in this scenario, I address more on human-made VOCALOID). In short, creating this type of video (excluding those that are entirely original compositions) requires first obtaining the source song to be adapted, transcribing it to generate a MIDI file, and then mapping prepared audio samples (intended to replace the original melody) to the corresponding timestamps of the original one through the MIDI. Manual production typically involves software such as Melodyne and FL Studio. (Please note that this description is based on my understanding and may not be entirely precise.)
+
+If you are familiar with recent Bilibili subcultures, you might recognize examples of this human-made VOCALOID style: the Hachimi music (keyword: 哈基米音乐), featuring Uma Musume characters like Tokai Teio and Machikane Tannhauser; or the Otto music (keyword: 电棍音乐) associated with former League of Legends pro player Hou Guoyu (侯国玉, ID: otto). There are also AI-based applications for creating these videos, often utilizing projects like SOVITS for the audio, though these are frequently criticized for lacking the authentic feel of the manual versions.
+
+Therefore, I am wondering if it is possible to, assisted with AI, to create such a human-made VOCALOID track from an existing song by providing the vocal clips I want to use as replacements. This could be achieved either by having the AI operate the computer directly (e.g., via computer use), or ideally, by using Python to **intelligently** orchestrate tools like FFmpeg, similar to the examples mentioned above.
+
+---
+
+I'll look at how those example repos were built first, then map that approach onto a 人力 pipeline.
+
+Yes, this is feasible, and I'd argue 人力 suits this approach better than video does. A human-made VOCALOID track is already a structured object: a list of notes, a library of samples, and an edit decision for each note. Melodyne and FL Studio are GUIs over that object, and code can hold it directly. Your description of the workflow is right. The piece it leaves out is timing metadata for each sample, meaning where in the clip the vowel starts. That turns out to matter about as much as the MIDI.
+
+**What those videos actually do**
+
+I looked at the two open repos. In the group-theory promo, the visuals are drawn frame by frame with Canvas, WebGL and JavaScript, and the soundtrack is synthesized in Python. A Node script then uses Chrome and FFmpeg to export the film, or to dump selected frames so they can be checked. The world.execute(me) PV works the same way: each frame is computed purely from the song's timestamp. The chat window is HTML built from dsh's own CSS and screenshotted with Playwright, and the TUI panel is drawn with PIL.
+
+I'd push back on two parts of your framing:
+
+- **"Learns how humans create."** I don't think that's quite what's happening. The model writes a deterministic program that drives existing tools: a browser engine, real CSS, ffmpeg. The elegance is that the result is editable source code rather than pixels, so fixing one thing means re-running the script, not regenerating the whole video.
+- **"Pure."** That's a little generous for one of them. The README says the published cut used AI-generated character art and also included AI-generated video for the dancer. The open-source rebuild swaps in a stand-in.
+
+**The part that's genuinely harder for audio**
+
+Look at the frame-check option in the promo repo. The model renders frame 150, looks at it, and fixes the code. That closed loop is a big reason these videos are good. I can't listen. I can measure things like per-note pitch error against the MIDI, onset drift and clipping. I can also render a pitch track or spectrogram as an image and read that, which catches most mechanical mistakes. But whether it sounds like Otto actually singing, and whether it's funny, has to be judged by your ear. So the realistic design is that code does the first pass, and you are the listening loop.
+
+**Pipeline**
+
+The closest prior art is Otto 活字印刷. otto-hzys converts Chinese characters and letters to pinyin, finds each syllable in a voice library, and splices them together. That's speech with no pitch control. Your project is 活字印刷 plus a score. I didn't find an open singing version in a quick search, though Bilibili creators may well have private scripts.
+
+1. **Stems.** Separate vocals from the instrumental with a RoFormer model (via UVR or python-audio-separator). If an official off-vocal version exists, use that instead.
+2. **Melody → MIDI.** This is the weakest automatic step. SOME (OpenVPI's singing-oriented MIDI extractor) or basic-pitch will give you a draft. Expect octave errors, long melismas split into the wrong notes, and missed grace notes. If a fan transcription exists (扒谱, a UST, an SVP project), it beats any model. Either way, plan on correcting it in a piano roll.
+3. **Sample library.** Run speech recognition plus forced alignment (WhisperX or Montreal Forced Aligner) over your clips. This slices them into syllables and tags each one with its pinyin, vowel onset time, median pitch and duration.
+4. **Assignment.** This is the genuinely "intelligent" step: choosing which clip goes on which note. Each candidate gets a score based on:
+   - how many semitones it has to be shifted (less is cleaner)
+   - how much it has to be stretched
+   - how close it sounds to the original lyric (空耳)
+   - a penalty for overusing the same clip
+   - placement, such as putting the signature catchphrase on the hook
+
+   An LLM is good at the semantic and comedic judgments and at writing this scoring function. Ordinary code does the arithmetic.
+5. **Render.** Do the pitch and time edits with WORLD (pyworld), Rubber Band (pyrubberband or Spotify's pedalboard), or PSOLA (parselmouth).
+6. **Mix.** Mix in pedalboard, then assemble with ffmpeg.
+
+The central artifact is a score file, the audio counterpart of that repo's `cues.json`. One note might look like this:
+
+```json
+{"t": 12.375, "dur": 0.25, "midi": 69, "lyric": "そ",
+ "clip": "otto_0412.wav", "span": [3.214, 3.508], "vowel_at": 3.301,
+ "alpha": 0.4, "keep_formant": true}
+```
+
+Because this timeline already says which clip plays when, the MAD video track (cutting to the source footage on every note) comes almost for free.
+
+**What separates "authentic" from SoVITS-smooth**
+
+SoVITS does timbre transfer: it produces a new, smooth performance in his voice. 人力's charm is collage. You recognise the exact utterance from that exact stream, rough edges included. Keeping the real samples is the audio equivalent of rendering with real CSS. Within that approach, three details do most of the work:
+
+- **Align the vowel, not the clip start.** In a sung "sa", the *a* lands on the beat and the *s* starts early. At 120 BPM a 16th note is 125 ms, and an *s* can easily run 100 ms. If you line up the clip's start with the note's start, it drags by almost a full 16th. UTAU formalised this offset as "preutterance" in its oto.ini file. In effect, 人力 is building an improvised UTAU voicebank from found audio, and OpenUtau could even serve as the renderer.
+- **Stretch only the vowel.** Fitting a 0.2 s "sa" into a 1 s note should give "saaaaa", not "sssssaaaaa".
+- **Correct pitch only partially. This is the main control.** Take a note with MIDI number *m*, and a clip whose pitch curve is f₀(t) with centre f_c. The output pitch is:
+
+  f_out(t) = 440 · 2^((m − 69)/12) · (f₀(t) / f_c)^α
+
+  The first part is the note's frequency; the second part is the clip's own wobble, scaled by α. At α = 0, the result is flattened to a perfectly straight line on the note. At α = 1, his whole natural intonation moves up or down intact. Somewhere around 0.3–0.6 it is clearly a melody but still clearly his speaking voice. Setting α note by note is probably most of what people mean by "manual feel".
+
+  Formant preservation is a similar control. Shift him up an octave without it and he becomes a chipmunk. Sometimes that's exactly the joke, so it should be a choice per note, not a global setting.
+
+**Computer use vs Python**
+
+Python, clearly. Having an AI click through Melodyne or FL for hundreds of notes is slow and fragile. What Melodyne actually contributes (note detection, formant-preserving pitch edits) has the open equivalents listed above. If you want a GUI for the final polish, have the script export a project file rather than operate the program. OpenUtau's .ustx and REAPER's .rpp are both plain text and easy to generate. FL's .flp is a binary format that's awkward to write.
+
+**Before anything gets built**
+
+Three answers would change the design a lot:
+
+1. **Which mode?** One option is lyric-faithful: the character sings the song's real lyrics, syllable by syllable. The other is meme-substitution, as in most 哈基米 and 电棍 music, where a few catchphrases carry the melody. The second needs far fewer samples but much more taste in the assignment step.
+2. **What song and what clips?** What language is each in? A Japanese song sung with Chinese clips makes 空耳 matching central. Are the clips already cut, or raw stream recordings?
+3. **What output?** Do you want a finished WAV/MP4, or an editable OpenUtau/REAPER project you polish by ear?
+
+A good first experiment: take one 8-bar phrase and about 20 clips, and render it three times, at α = 0, 0.5 and 1. Hearing those side by side will show you what makes 人力 work faster than building the whole pipeline would.
+
+Sources:
+- [AnctyEnly453/abstract-algebra-promo](https://github.com/AnctyEnly453/abstract-algebra-promo)
+- [MisakaZentai/world-execute-me-dsh-pv](https://github.com/MisakaZentai/world-execute-me-dsh-pv)
+- [hua-zhi-wan/otto-hzys](https://github.com/hua-zhi-wan/otto-hzys)
+
+---
+
+You give me confidence.
+
+Eventually we may make a full song from scratch, but for now I would only make a easier case for test to see if that works. After we discuss necessary details you can even make it a developing plan for Claude Code.
+
+Which mode:
+哈基米音乐 is much easier, with limited syllables, only repeating and swapping the order of characters of sentences like 「はちみーをなめるとあしがはやくなる」 or 「マンボ、マンボウ～！　お祭りマンボ～ウ！♪」「わっしょいマンボ、お祭りマンボ～ウ♪　ざぶざぶ、ゆらゆら、お祭りマンボ～～ウ♪」
+While 电棍音乐 is much broader. They usually combined to actually meaningful Chinese song lyrics, and some fixed pattern like 说的道理 must be maintained. That's much complexer in the design stage.
+What I want is the easiest case. And that answers...
+
+What song and what clips:
+Source song: I'll take the "Elizi's dream" part (roughly 1:14) part of the 
+Phainon Trailer "Coronal Radiance" (en: https://www.youtube.com/watch?v=GaT1GftoqV0, zh: https://www.youtube.com/watch?v=BEKGuF5tY9E / https://www.bilibili.com/video/BV1HfKiz3Ezf/)from Honkai: Star Rail. What I want to replace is the humming.
+I know usually I need to use tools like UVR to remove other narration in the video, but someone has done that (https://www.bilibili.com/video/BV1QYgfzcEpF/).
+
+Samples to replace: 电棍's laughters (3 sounds of laughter, each can be cut further into several single laughter, and 1 intake of breath) from this video https://www.bilibili.com/video/BV1Zs411g7Kg/ of 02:00 to 02:06 (laughter 1 with 6 sounds, intake of breath, laughter 2 with 4 sounds, laughter 3 with 3 sounds).
+Why is it simple is that it only replaces laughters to original hummings, no Chinese pronounciations and tones to be considered. The intake of breath can be added into to make it more natual or funny.
+
+What output: only audio. I'll just take the original video to use.
+
+After all this is just a fun idea with absolutely no meaning at all. Please check if it's feasible.
+
+---
+
+I'll check what's actually in those videos first, especially the narration-removed version, since what it does or doesn't remove decides the pipeline.
+
+Yes, it's feasible, and it's a good first test: with no lyrics involved, the only problem left is the musical one. The sources also turned out to be in better shape than you expected.
+
+**The song side needs no separation model**
+
+The video you found isn't just narration-removed. It is split into three parts of equal length: music with the male humming, music without the humming, and a vocals-only track. Each part does a different job:
+
+- **Part 2 (music, no humming)** is your backing track, as it is.
+- **The guide melody** comes from Part 3, if Part 3 turns out to be the humming on its own. If Part 3 is the dialogue instead, you get the humming by subtraction: Part 1 = music + humming and Part 2 = music, so Part 1 − Part 2 = humming. That only works if the two are lined up to the sample at identical volume. We find the offset with cross-correlation, which slides one track against the other and picks the lag where they match best; it's one line in scipy.
+- **Why subtraction will be slightly imperfect.** Bilibili encoded each part separately, so the compression noise won't cancel, and you'll get the humming plus a faint wash of music.
+- **Why that doesn't matter here.** The guide is never heard in the final mix. It only gets pitch-tracked, so it needs to be trackable, not clean.
+
+The humming is also a male voice, which helps: Otto's laughs won't need to travel as far in pitch.
+
+**The separation model belongs on the Otto clip**
+
+That video is a 2018 League of Legends stream recording, so game sound effects and background music are almost certainly under the laugh. If you pitch-shift the laugh, you pitch-shift that noise with it, and it smears audibly. Running a vocal separation model on just those 6 seconds fixes that.
+
+**The real design problem: legato humming vs staccato laughter**
+
+Humming is long and connected; laughing is a train of short "ha"s, roughly five per second. For each long note there are three options:
+
+- **Laugh train.** Fill the note with "ha-ha-ha", every "ha" pitched to the note. This is the most 鬼畜 option.
+- **Stretched single "ha".** Stretch one vowel to cover the note. It sounds more like singing, but risks a smeared, synth-like sound.
+- **Hybrid.** A short train whose last "ha" is stretched to the note's end.
+
+There is also a nicer option at the phrase level. Your source already has structure: laugh 1 (6 "ha"s), an inhale, laugh 2 (4), laugh 3 (3). If a humming phrase has around six notes, map laugh 1 onto it in its natural order, and put the inhale in the rest before the next phrase. A real laugh falls in pitch and loudness as it goes, and keeping that arc while it traces the melody is probably the funniest version and the most "human-made". It only works where the phrase lengths roughly fit, so the code should do this where it fits and fall back elsewhere.
+
+**Three things to measure before writing the renderer**
+
+These are the audio equivalent of checking frames before rendering the whole video:
+
+1. **How voiced the laughs are.** A breathy "ha" carries pitch weakly. If it's mostly breath, the melody won't be recognisable no matter how well it's tuned. This is measurable as the fraction of frames where the pitch tracker finds a pitch. If it comes out low, hard tuning (α near 0) and giving the most voiced "ha"s to the important notes are the fallbacks.
+2. **How far the pitch has to move.** Laughter usually sits well above speaking pitch, while male humming may sit low. Pulling a laugh down 8 or more semitones tends to get buzzy. There is an easy lever, though: transpose the whole melody up an octave. The melody stays the same tune and won't clash with the backing.
+3. **Where the segment sits on the original video.** The stems run 3:19 and the official PV 3:22, so the stems are trimmed. Cross-correlating the music finds the offset.
+
+One practical point: my workspace here can't download from Bilibili or YouTube. Either you grab the files with yt-dlp (append `?p=2` for a multi-part video's second part) and attach them, or the Claude Code plan runs that step on your machine.
+
+**Before I write the plan**
+
+1. For long notes, do you want the laugh train, the stretched "ha", or the hybrid? Or should the test render all three side by side?
+2. Hard-snapped to exact notes (robotic, classic 鬼畜), or following the humming's natural slides?
+3. What's in Part 3, the humming alone or the dialogue? And does the 1:14 section have narration you want to keep under the laughs?
+4. Is 02:00–02:06 in the 6:46 cut (P1) of the Otto video, or in the 17:20 full version?
+
+Sources:
+- [【4K纯人声纯音乐纯享】白厄角色PV——「日冕」](https://www.bilibili.com/video/BV1QYgfzcEpF/)
+- [那个说炽天使剑魔玩得垃圾的人的剑魔](https://www.bilibili.com/video/BV1Zs411g7Kg/)
+- [《崩坏：星穹铁道》白厄角色PV——「日冕」](https://www.bilibili.com/video/BV1HfKiz3Ezf/)
+
+---
+
+The part 3 of the collection of the narration-removed videos is humming + narration. The 3:18 length is because it subtracting the opening logo. We can do frame comparison of the narration-removed video and the youtube one, both without watermark.
+
+Your "game sound effects and background music are almost certainly under the laugh" worry: not really, because the laughter is so dorminant so that the noise can be neglected. If you still worry about it we can do noise remove also using UVR.
+
+I will choose stretched single "ha". And your suggestion is likely what I thought: every note is one "ha". Like your suggested, "hard-snapped to exact notes". The emotion in the original song builds progressively, but the "ha" sounds are similar. Can we do reverberation?
+
+"If it's mostly breath", no, the laughters are mostly loud true voice sounds. To download I will provide my account for Claude Code.
+
+02:00–02:06 is in the 6:46 cut (P1) of the Otto video.
+
+What I can tell you more:
+Take https://www.youtube.com/watch?v=BEKGuF5tY9E as timestamp:
+Start: 1:10
+Start humming: 1:14
+Gradually reverberated humming: 1:27
+Most reverberated humming: 1:42
+Back to non reverberated humming: 1:57
+End: 2:08
+
+Sorry to Phainon. Is this enough to make a coding plan?
+
+---
+
+Yes, that's enough to plan. I'll write the plan as a Markdown file you can drop into an empty folder for Claude Code.
+
+Yes, that's enough. PLAN.md takes Claude Code through eight stages, from download to final splice, and stops at five points for you to listen.
+
+**Reverberation: yes, and the plan handles it in two layers.**
+
+- **Reverb itself.** Render the laugh vocal once completely dry and once fully reverberated, then blend the two with a curve built from your timestamps: rising from 1:27, peaking at 1:42, back to dry by 1:57. Blending two fixed renders avoids the clicks you get from changing reverb settings partway through.
+- **The build-up.** Each "ha" gets the loudness of the humming note it replaces. The note-to-"ha" assignment also puts the most strained-sounding units on the loudest notes. Even though the "ha"s sound alike, their order and level can still climb with the song.
+
+**Where I adjusted your choices:**
+
+- **Alignment uses audio cross-correlation, not frame comparison.** At 30 fps, frames are only precise to 33 ms. At the splice, two copies of the same music 33 ms apart sound like a stutter. Audio alignment is exact to the sample. Frame comparison is still a useful sanity check.
+- **Don't hand Claude Code your Bilibili password.** The plan uses browser cookies through yt-dlp instead. On Windows, Firefox or an exported cookies.txt is more reliable than Chrome for this.
+- **Expect long notes to sound frozen.** Stretching a ~150 ms vowel across a 2-second note is about 13×, and with perfect pitch that will sound frozen. That may be exactly the joke. In case it isn't, the plan also renders a version with slight vibrato for comparison. It also evens out each "ha"'s natural fade, so long notes don't trail off.
+- **The reverb that you want to copy also makes transcription harder.** Between 1:27 and 1:57, each hummed note's tail bleeds into the next, so expect to fix a few notes by hand there.
+- **Noise:** I took your word on it. Cleanup is off by default and can be switched on with one setting.
+
+**Two defaults to confirm when you start:**
+
+- **Reverb at 1:57:** I assumed it fades back gradually from 1:42. If it actually cuts back abruptly at 1:57, that's a one-line config change.
+- **Narration:** Part 3 minus the humming gives you the narration. If any falls inside the segment, the plan keeps it in the final mix.
+
+At Stage 5, Claude Code will ask whether you want to write the core render function yourself; that's the step where most of the technique lives. And as for Phainon, he's survived worse than Otto laughing through his dream sequence.
