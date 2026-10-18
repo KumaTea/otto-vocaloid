@@ -158,3 +158,14 @@ During your building, don't know if this is in your plan, but I think it's much 
 ====== 2026-10-10 17:28:06 ======
 
 Great. For the copyright concern I will handle properly (including decide a proper license specially for the blog post) before publishing. And I would request you to make another Chinese version of the html, just translate the original is fine. I think that's only string changes, no rebuild of components, is that true?
+
+## Chat 2 · 2026-10-18 18:40:13 · Minimal audio reconstruction files
+<!-- session: ad2c1afc-9e2f-48e2-a655-a860b09a15c8 -->
+
+====== 2026-10-18 18:40:13 ======
+
+I have committed this repo, now I want to leave the least file that can re-construct this audio (although they still won't be pushed to upstream), please check which files to delete. (Treat YouTube and Bilibili sources, including the Baidu Netdisk share files as re-downloadable and safe to delete, requiring user to re-download when rebuild)
+
+====== 2026-10-18 18:51:37 ======
+
+Please leave this note of rebuilding (including what files are needed and their hash), then delete. Only media files are needed to delete, mid files are so tiny, leave them there.
